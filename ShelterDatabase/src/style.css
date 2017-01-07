@@ -1,0 +1,176 @@
+.menu
+{
+    -fx-background-color: #aaf033;
+    -fx-min-height: 40px;
+    -fx-alignment: bottom-left;
+    -fx-padding: 10 0 1 10;
+    -fx-border-color: #44c009;
+    -fx-border-width: 0 0 5 0;
+}
+
+.active_tab
+{
+    -fx-background-color: #44c009;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 14px;
+    -fx-background-radius: 5 5 0 0;
+    -fx-translate-y: 1; /*workaround fix of a bug*/
+}
+
+.unactive_tab
+{
+    -fx-background-color: #aaf033;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 14px;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.unactive_tab:hover
+{
+    -fx-background-color: #bbff55;
+}
+
+.options
+{
+    -fx-background-color: #bbbbbb;
+    -fx-min-height: 30;
+}
+
+.options .button
+{
+    -fx-background-color: #bbbbbb;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 12;
+    -fx-min-height: 30;
+}
+
+.options .button:hover
+{
+    -fx-background-color: #999999;
+}
+
+.headings
+{
+    -fx-border-color: #d3d3d3;
+    -fx-background-color: #d3d3d3;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 13px;
+    -fx-padding: 10 10 10 10;
+    -fx-alignment: center-left;
+}
+
+.animals_list > *
+{
+    -fx-border-color: #f3f3f3;
+    -fx-background-color: #f3f3f3;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 12px;
+    -fx-padding: 10 10 10 10;
+    -fx-alignment: center-left;
+}
+
+.odd_record
+{
+    -fx-border-color: #f3f3f3;
+    -fx-background-color: #f3f3f3;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 12px;
+    -fx-padding: 10 10 10 10;
+    -fx-alignment: center-left;
+}
+
+.even_record
+{
+    -fx-border-color: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 12px;
+    -fx-padding: 10 10 10 10;
+    -fx-alignment: center-left;
+}
+
+.even_record:hover, .odd_record:hover
+{
+    -fx-border-color: #aaf033;
+}
+
+.selected_record
+{
+    -fx-background-color: #aaf033;
+    -fx-border-color: #aaf033;
+}
+
+.animals_list .even_record, .animals_list .odd_record
+{
+    -fx-pref-width: 700;
+}
+
+.clients_list .even_record, .clients_list .odd_record
+{
+    -fx-pref-width: 1100px;
+}
+
+.employees_list .even_record, .employees_list .odd_record
+{
+    -fx-pref-width: 1500px;
+}
+
+.edit_button
+{
+    -fx-background-color: #20ce10;
+}
+
+.edit_button:hover
+{
+    -fx-background-color: #bbff55;
+}
+
+.details_pane
+{
+    -fx-background-color: #f0f0f0;
+}
+
+.details
+{
+    -fx-padding: 40 0 40 0;
+}
+
+.animal_detail
+{
+    -fx-padding: 2 20 2 20;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 13;
+}
+
+.animal_detail_title
+{
+    -fx-text-fill: #11a005;
+    -fx-font-weight: bold;
+}
+
+.event
+{
+    -fx-background-color: #f8f8f8;
+    -fx-spacing: 20;
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 12;
+    -fx-padding: 15;
+    -fx-pref-width: 390;
+    -fx-border-color: #cccccc;
+}
+
+.event:hover
+{
+    -fx-background-color: #cccccc;
+}
+
+.event_details
+{
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+}
+
+.event_info_title
+{
+    -fx-font-weight: bold;
+}
