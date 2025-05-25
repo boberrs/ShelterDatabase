@@ -8,6 +8,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -158,7 +159,8 @@ public class AdmissionEditor extends Dialog<Admission>
             body.getChildren().add(edit_grid);
 
             TextArea errors = new TextArea();
-                errors.setMaxWidth(1000);
+                errors.setMaxWidth(800);
+                errors.setMaxHeight(100);
                 errors.setEditable(false);
             body.getChildren().add(errors);
 
@@ -171,15 +173,37 @@ public class AdmissionEditor extends Dialog<Admission>
                     else if (chip_input.getText().length() != 15)
                         errors.setText(errors.getText().concat("Chip must have 15 characters\n"));
 
+                    try {
+                        if (!age_input.getText().equals(""))
+                            Integer.valueOf(age_input.getText());
+                    } catch (NumberFormatException e){
+                        errors.setText(errors.getText().concat("Age must have numeric value\n"));
+                    }
+
+                    try {
+                        if (!cage_input.getText().equals(""))
+                            Integer.valueOf(cage_input.getText());
+                    } catch (NumberFormatException e){
+                        errors.setText(errors.getText().concat("Cage must have numeric value\n"));
+                    }
+
                     if (client_name_input.getText().equals(""))
                         errors.setText(errors.getText().concat("Client name cannot be empty\n"));
-                    else if (client_name_input.getText().length() != 15)
+
+                    if (!client_pesel_input.getText().equals("") && client_pesel_input.getText().length() != 11)
                         errors.setText(errors.getText().concat("PESEL must have 11 characters\n"));
 
                     if (date_input.getText().equals(""))
                         errors.setText(errors.getText().concat("Date cannot be empty\n"));
                 });
-            body.getChildren().add(my_ok);
+            buttons.getChildren().add(my_ok);
+
+            Button cancel = new Button("Cancel");
+                cancel.setOnAction(event->{
+                    this.close();
+                });
+            buttons.getChildren().add(cancel);
+
         this.getDialogPane().setContent(body);
 
         this.setResultConverter(e -> {
